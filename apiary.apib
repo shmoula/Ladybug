@@ -1,0 +1,33 @@
+FORMAT: 1A
+
+# Ladybug Demo
+Ovládání zařízení probíhá pomocí posílání textových HTTP požadavků na adresu a port služby. Jedná se o požadavky GET s parametrem označujícím číslo pinu, případně nastavovaný status.
+
+## setPin [/?setPin={Status}{Pin}]
+Nastaví požadovanému pinu stav vypnuto / zapnuto, vrací aktuální hodnotu nastavenou na pinu a jeho pořadové číslo.
+
+Kombinace parametrů Status a Pin je zapisovaná dohromady - např. pro zapnutí pinu 3 je parametr *setPin=13*, pro vypnutí pinu 2 je *setPin=02*.
+
++ Parameters
+    + Status (required, number, `1`) ... Číselné vyjádření boolovy hodnoty, která se má nastavit na pin.
+    + Pin (required, number,  `2`) ... Pořadové číslo pinu
+
+### Nastav hodnotu pinu [GET]
++ Response 200 (text/plain)
+
+    + Body
+
+            12
+
+## getPin [/?getPin={Pin}]
+Přečte aktuální hodnotu nastavenou na pinu a vrací ji společně s číslem pinu.
+
++ Parameters
+    + Pin (required, number,  `2`) ... Pořadové číslo pinu
+
+### Vrať hodnotu pinu [GET]
++ Response 200 (text/plain)
+
+    + Body
+
+            13
