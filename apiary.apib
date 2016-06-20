@@ -13,11 +13,11 @@ Kombinace parametrů Status a Pin je zapisovaná dohromady - např. pro zapnutí
     + Pin (required, number,  `2`) ... Pořadové číslo pinu
 
 ### Nastav hodnotu pinu [GET]
-+ Response 200 (text/plain)
++ Response 200 (application/json)
 
     + Body
 
-            12
+            {"a":"b"}
 
 ## getPin [/?getPin={Pin}]
 Přečte aktuální hodnotu nastavenou na pinu a vrací ji společně s číslem pinu.

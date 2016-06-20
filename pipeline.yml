@@ -1,0 +1,4 @@
+pipeline:
+    - name: stage 1
+      type: command
+      command: echo "zdarec"
